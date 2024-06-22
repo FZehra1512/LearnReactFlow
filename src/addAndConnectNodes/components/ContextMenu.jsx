@@ -17,25 +17,45 @@ const ContextMenu = ({ x, y, show, onClose, onAddNodes }) => {
     top: y,
     left: x,
     background: "white",
-    boxShadow: "0px 0px 5px rgba(0,0,0,0.5)",
+    borderRadius: "10px",
+    boxShadow: "2px 2px 5px 2px rgba(0,0,0,0.2)",
     zIndex: 1000,
   };
 
   return (
     <div style={style}>
       <ul style={{ margin: 0, padding: 10, listStyle: "none" }}>
-        <li>
+        <button
+          style={{
+            fontWeight: "bold",
+            marginBottom: "10px",
+            backgroundColor: "#ddd",
+            color: "#000",
+          }}
+          onClick={onClose}
+        >
+          x
+        </button>
+        <li style={{ display: "flex", flexDirection: "column" }}>
           <input
             type="number"
             value={nodeCount}
             onChange={(e) => setNodeCount(e.target.value)}
             min="1"
-            style={{ width: "50px" }}
+            style={{
+              width: "150px",
+              height: "30px",
+              marginBottom: "10px",
+            }}
           />
-          <button onClick={handleAddNodes}>Add Connecting Nodes</button>
+          <button
+            style={{ backgroundColor: "#ddd", color: "#000" }}
+            onClick={handleAddNodes}
+          >
+            Add
+          </button>
         </li>
       </ul>
-      <button onClick={onClose}>x</button>
     </div>
   );
 };

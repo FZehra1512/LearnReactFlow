@@ -1,6 +1,5 @@
 const calculateNodePosition = (sourcePosition, angle, index, totalNodes) => {
   let edgeLength = 150;
-  console.log(totalNodes);
   if (totalNodes > 7 && totalNodes < 16) {
     edgeLength = edgeLength * (index % 2 === 0 ? 1 : 2);
   } else if (totalNodes > 15 && totalNodes < 32) {

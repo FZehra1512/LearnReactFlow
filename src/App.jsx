@@ -14,9 +14,11 @@
 
 import React from "react";
 import AddandConnectNodes from "./addAndConnectNodes/main"
+import EasyConnectExample from "./easyConnect/main";
 
 const App = () => {
   return <AddandConnectNodes />;
+  // return <EasyConnectExample />
 };
 
 export default App;
